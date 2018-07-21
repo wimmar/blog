@@ -1,2 +1,7 @@
-# blog
-My Gatsby-generated blog
+A blog, statically generated using Gatsby
+
+
+## Commands
+
+`gatsby develop`
+`gatsby build --prefix-paths`
