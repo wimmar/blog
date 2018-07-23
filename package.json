@@ -7,14 +7,15 @@
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",
-    "develop-host": "gatsby develop --host 192.168.0.70",
+    "dev": "gatsby develop --host 192.168.0.142",
     "build": "gatsby build",
     "serve": "gatsby serve",
+    "dist": "gatsby build --prefix-paths",
     "format-output": "prettier src/**/*.{js,jsx}",
     "format": "prettier --write src/**/*.{js,jsx}",
     "lint-errors": "eslint src/**/*.{js,jsx} --quiet",
     "lint": "eslint src/**/*.{js,jsx}",
-    "generate-app-icons": "sh ./scripts/generate-app-icons.sh",
+    "icons": "cd scripts/ && generate-app-icons.bat",
     "testbuild": "browser-sync start --server \"public\" --online \"false\" --serveStatic \"./\" --files \"public\""
   },
   "devDependencies": {
@@ -48,6 +49,7 @@
     "gatsby-plugin-google-analytics": "^1.0.31",
     "gatsby-plugin-jss": "^1.5.14",
     "gatsby-plugin-manifest": "^1.0.27",
+    "gatsby-plugin-no-sourcemaps": "^1.0.5",
     "gatsby-plugin-offline": "^1.0.18",
     "gatsby-plugin-react-helmet": "^2.0.11",
     "gatsby-plugin-react-next": "^1.0.11",
