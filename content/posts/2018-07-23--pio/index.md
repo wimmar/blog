@@ -176,9 +176,6 @@ The terminal output when building shows us the libraries in the mbed "framework"
 ## Can I convert my existing embedded project to use platformIO?
 Killer question. It should be possible, but depending on your current codebase/project this might be easy or quite hard. You could make your own development platform definition (a `manifest.json` and `main.py`) and board definition (`myboard.json`). For examples, take a look at the [github repository]().
 
-> - board definition
-> - platform ("mbed") definition: vr meerdere devices suitable, definitie v LEDs etc
-
 ### Yes, but should you?
 You'd like to use a modern editor for your embedded project. PlatformIO is not the only way to achieve this. If your plan on keeping your directory structure, your own libraries and makefiles, you might not need/want platformIO. It might just be easier to open your existing code, and create a working launch (debug) config.
 
@@ -203,7 +200,7 @@ Essentially you just want to stitch the VS Code launch config to GDB. The [Corte
   > I did have to set the `cortex-debug.JLinkGDBServerPath` and `cortex-debug.armToolchainPath` in workspace settings, but if the GDB and arm-eabi executables are in your system path you should be fine.
 
 Debugging is not the only thing you want though (but it's a biggie). Other things you might want:
-* A serial monitor: another [extension](https://marketplace.visualstudio.com/items?itemName=olback.vscode-serial)?
+* A serial monitor: check out [this extension](https://marketplace.visualstudio.com/items?itemName=olback.vscode-serial)?
   > You could use PlatformIO's monitor, but platformIO does take some time to load at startup. So if all you're going to use is the serial monitor, why go bulky?
 
 

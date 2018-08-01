@@ -11,7 +11,6 @@ import ReduxIcon from "!svg-react-loader!../../images/svg-icons/redux.svg?name=R
 import GatsbyIcon from "!svg-react-loader!../../images/svg-icons/gatsby.svg?name=GatsbyIcon";
 import WebpackIcon from "!svg-react-loader!../../images/svg-icons/webpack.svg?name=WebpackIcon";
 import BabelIcon from "!svg-react-loader!../../images/svg-icons/babel.svg?name=BabelIcon";
-import NetlifyIcon from "!svg-react-loader!../../images/svg-icons/netlify.svg?name=NetlifyIcon";
 
 const styles = theme => ({
   stack: {
@@ -41,7 +40,7 @@ const styles = theme => ({
   header: {
     textAlign: "center",
     fontSize: ".85em",
-    letterSpacing: ".3em",
+    letterSpacing: ".2em",
     width: "100%",
     margin: "0 0 .8em 0",
     fontWeight: 300
@@ -60,13 +59,12 @@ const StackIcons = props => {
     { name: "redux", url: "https://redux.js.org/", comp: ReduxIcon },
     { name: "algolia", url: "https://www.algolia.com/", comp: AlgoliaIcon },
     { name: "webpack", url: "https://webpack.js.org/", comp: WebpackIcon },
-    { name: "babel", url: "https://babeljs.io/", comp: BabelIcon },
-    { name: "netlify", url: "https://www.netlify.com/", comp: NetlifyIcon }
+    { name: "babel", url: "https://babeljs.io/", comp: BabelIcon }
   ];
 
   return (
     <div className={classes.stack}>
-      <h5 className={classes.header}>built with:</h5>
+      <h4 className={classes.header}>built with:</h4>
       <div className={classes.box}>
         {items.map(item => {
           const Icon = item.comp;

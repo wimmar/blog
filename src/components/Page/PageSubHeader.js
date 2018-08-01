@@ -6,7 +6,7 @@ import AlgoliaIcon from "!svg-react-loader!../../images/svg-icons/algolia-full.s
 
 const styles = theme => ({
   header: {
-    margin: "0 0 3em",
+    margin: "0 0 0",
     display: "flex",
     flexDirection: "row",
     justifyContent: "flex-start",
@@ -14,17 +14,28 @@ const styles = theme => ({
   },
   title: {
     color: theme.main.colors.title,
-    fontSize: `${theme.main.fonts.title.size}em`,
+    fontSize: `${theme.main.fonts.subTitle.size}em`,
     letterSpacing: "-0.04em",
-    fontWeight: theme.main.fonts.title.weight,
-    lineHeight: theme.main.fonts.title.lineHeight,
+    fontWeight: theme.main.fonts.subTitle.weight,
+    lineHeight: theme.main.fonts.subTitle.lineHeight,
     margin: "0 0 0.4em",
     [`@media (min-width: ${theme.mediaQueryTresholds.M}px)`]: {
-      fontSize: `${theme.main.fonts.title.sizeM}em`
+      fontSize: `${theme.main.fonts.subTitle.sizeM}em`
     },
     [`@media (min-width: ${theme.mediaQueryTresholds.L}px)`]: {
-      fontSize: `${theme.main.fonts.title.sizeL}em`,
+      fontSize: `${theme.main.fonts.subTitle.sizeL}em`,
       letterSpacing: "-0.05em"
+    }
+  },
+  mark: {
+    width: "130px",
+    display: "block",
+    margin: "0 0 0 16px",
+    [`@media (min-width: ${theme.mediaQueryTresholds.M}px)`]: {
+      width: "170px"
+    },
+    [`@media (min-width: ${theme.mediaQueryTresholds.L}px)`]: {
+      width: "190px"
     }
   }
 });

@@ -12,23 +12,23 @@ module.exports = {
   authorName: "Wim Marynissen",
   authorTwitterAccount: "wim_mar",
   // info
-  infoTitle: "Wim Marynissen",
-  infoTitleNote: "Software blog",
+  infoTitle: "Programming notes",
+  infoTitleNote: "by Wim Marynissen",
   //infoTitleNote: "software engineering blog",
   // manifest.json
-  manifestName: "Software blog",
-  manifestShortName: "BlogWimMar", // max 12 characters
+  manifestName: "Programming notes",
+  manifestShortName: "BlogWim", // max 12 characters
   manifestStartUrl: "/",
   manifestBackgroundColor: colors.background,
   manifestThemeColor: colors.background,
   manifestDisplay: "standalone",
   // contact
-  contactEmail: "wim.marynissen2@telenet.be",
+  contactEmail: "wimmar0@gmail.com",
   // social
   authorSocialLinks: [
     { name: "github", url: "https://github.com/WimMar" },
     { name: "twitter", url: "https://twitter.com/wim_mar" },
-    { name: "facebook", url: "http://facebook.com/" },
+    // { name: "facebook", url: "http://facebook.com/" },
     { name: "linkedin", url: "http://linkedin.com/in/wimmar" }
   ]
 };

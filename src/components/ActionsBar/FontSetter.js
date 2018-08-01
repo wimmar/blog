@@ -84,9 +84,11 @@ class FontSetter extends React.Component {
               <Grow in={open} id="font-menu-list" style={{ transformOrigin: "0 0 0" }}>
                 <Paper>
                   <MenuList role="menu">
+                    <MenuItem onClick={this.handleSetting}>200%</MenuItem>
                     <MenuItem onClick={this.handleSetting}>150%</MenuItem>
                     <MenuItem onClick={this.handleSetting}>125%</MenuItem>
                     <MenuItem onClick={this.handleSetting}>100%</MenuItem>
+                    <MenuItem onClick={this.handleSetting}>75%</MenuItem>
                   </MenuList>
                 </Paper>
               </Grow>

@@ -88,7 +88,11 @@ class TopMenu extends React.Component {
                       const { fields, frontmatter } = page.node;
 
                       return (
-                        <a key={fields.slug} href={fields.slug} style={{ display: "block" }}>
+                        <a
+                          key={fields.slug}
+                          href={"/blog" + fields.slug}
+                          style={{ display: "block" }}
+                        >
                           <MenuItem
                             onClick={e => {
                               this.props.pageLinkOnClick(e);
@@ -100,8 +104,14 @@ class TopMenu extends React.Component {
                         </a>
                       );
                     })}
-                    <a href="http://wimmar.be/#contact" style={{ display: "block" }}>
-                      <MenuItem>
+
+                    <a href="https://wimmar.be/#contact" style={{ display: "block" }}>
+                      <MenuItem
+                        onClick={e => {
+                          this.props.pageLinkOnClick(e);
+                          this.handleClose();
+                        }}
+                      >
                         Contact
                       </MenuItem>
                     </a>

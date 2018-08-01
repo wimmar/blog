@@ -5,6 +5,7 @@ require("core-js/fn/array/find");
 import Main from "../components/Main";
 import Article from "../components/Main/Article";
 import PageHeader from "../components/Page/PageHeader";
+import PageSubHeader from "../components/Page/PageSubHeader";
 import Search from "../components/Search";
 
 const SearchPage = props => {
@@ -13,8 +14,9 @@ const SearchPage = props => {
   return (
     <Main>
       <Article>
-        <PageHeader title="Search by" algolia={true} />
+        <PageHeader title="Search" />
         <Search algolia={data.site.siteMetadata.algolia} />
+        <PageSubHeader title="powered by" algolia={true} />
       </Article>
     </Main>
   );

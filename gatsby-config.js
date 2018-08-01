@@ -48,16 +48,16 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-next`,
-    // {
-    //   resolve: `gatsby-plugin-algolia`,
-    //   options: {
-    //     appId: process.env.ALGOLIA_APP_ID ? process.env.ALGOLIA_APP_ID : "",
-    //     apiKey: process.env.ALGOLIA_ADMIN_API_KEY ? process.env.ALGOLIA_ADMIN_API_KEY : "",
-    //     indexName: process.env.ALGOLIA_INDEX_NAME ? process.env.ALGOLIA_INDEX_NAME : "",
-    //     queries,
-    //     chunkSize: 10000 // default: 1000
-    //   }
-    // },
+    {
+      resolve: `gatsby-plugin-algolia`,
+      options: {
+        appId: process.env.ALGOLIA_APP_ID ? process.env.ALGOLIA_APP_ID : "",
+        apiKey: process.env.ALGOLIA_ADMIN_API_KEY ? process.env.ALGOLIA_ADMIN_API_KEY : "",
+        indexName: process.env.ALGOLIA_INDEX_NAME ? process.env.ALGOLIA_INDEX_NAME : "",
+        queries,
+        chunkSize: 10000 // default: 1000
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -88,8 +88,8 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 800,
-              backgroundColor: "transparent",
-              pathPrefix: '/blog'
+              backgroundColor: "transparent"
+              //pathPrefix: '/blog'
             }
           },
           {
