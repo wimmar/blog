@@ -18,7 +18,7 @@ module.exports = {
   // manifest.json
   manifestName: "Programming notes",
   manifestShortName: "BlogWim", // max 12 characters
-  manifestStartUrl: "/",
+  manifestStartUrl: "/blog/",
   manifestBackgroundColor: colors.background,
   manifestThemeColor: colors.background,
   manifestDisplay: "standalone",
