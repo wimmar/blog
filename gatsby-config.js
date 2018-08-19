@@ -33,6 +33,7 @@ module.exports = {
   siteMetadata: {
     title: config.siteTitle,
     description: config.siteDescription,
+    keywords: config.siteKeywords,
     siteUrl: config.siteUrl,
     pathPrefix: config.pathPrefix,
     algolia: {

@@ -4,8 +4,9 @@ module.exports = {
   siteTitle: "Blog", // <title>
   shortSiteTitle: "Blog wimmar.be", // <title> ending for posts and pages
   siteDescription: "Programming (embedded and web) blogposts",
+  siteKeywords: "Programming, Blog, Engineering, Web",
   siteUrl: "https://wimmar.be/blog",
-  pathPrefix: "",
+  pathPrefix: "/blog",
   siteImage: "preview.jpg",
   siteLanguage: "en",
   // author

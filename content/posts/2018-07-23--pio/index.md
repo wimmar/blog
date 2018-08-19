@@ -203,6 +203,8 @@ Debugging is not the only thing you want though (but it's a biggie). Other thing
 * A serial monitor: check out [this extension](https://marketplace.visualstudio.com/items?itemName=olback.vscode-serial)?
   > You could use PlatformIO's monitor, but platformIO does take some time to load at startup. So if all you're going to use is the serial monitor, why go bulky?
 
+* Building and flashing support, instellisense, ...
+  > Update: check out my other post about Embedded VS Code development (without PlatformIO)
 
-### Conclusion
+## Conclusion
 PlatformIO is perfect if you're a hobbyist and you're just starting a new project. It will get you started fast, providing you with clean library and code management. If you have an existing project, it might not be trivial to convert to platformIO (using the platformIO board and framework definitions). You might then be better off configuring some extension(s) for debugging, serial console, etc. to fit your codebase.
