@@ -1,4 +1,5 @@
 require("dotenv").config();
+
 const config = require("./content/meta/config");
 
 const query = `{
@@ -109,6 +110,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-catch-links`,
+    `gatsby-plugin-remove-serviceworker`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

@@ -40,8 +40,40 @@ class Layout extends React.Component {
   componentDidMount() {
     this.props.setIsWideScreen(isWideScreen());
     if (typeof window !== "undefined") {
+      window.addEventListener("beforeinstallprompt", function(event) {
+        console.log("Before install prompt!");
+        // Prevent Chrome 67 and earlier from automatically showing the prompt
+        event.preventDefault();
+
+        //this.deferredPrompt = event;
+
+        event.prompt();
+      });
+
       window.addEventListener("resize", this.resizeThrottler, false);
     }
+
+    // window.addEventListener("beforeinstallprompt", function(event) {
+    //   console.log("before install prompt");
+    //   //// Stash the event so it can be triggered later.
+    //   //deferredPrompt = e;
+    //   event.prompt();
+    //   // // Show the prompt
+    //   // deferredPrompt.prompt();
+    //   // // Wait for the user to respond to the prompt
+    //   event.userChoice.then(choiceResult => {
+    //     if (choiceResult.outcome === "accepted") {
+    //       console.log("User accepted the A2HS prompt");
+    //     } else {
+    //       console.log("User dismissed the A2HS prompt");
+    //     }
+    //     event = null;
+    //   });
+    // });
+    // window.addEventListener("appinstalled", evt => {
+    //   //app.logEvent('a2hs', 'installed');
+    //   console.log("installed");
+    // });
   }
 
   componentWillMount() {

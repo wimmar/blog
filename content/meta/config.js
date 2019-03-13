@@ -15,11 +15,12 @@ module.exports = {
   // info
   infoTitle: "Programming notes",
   infoTitleNote: "by Wim Marynissen",
-  //infoTitleNote: "software engineering blog",
+  // infoTitleNote: "software engineering blog",
   // manifest.json
   manifestName: "Programming notes",
   manifestShortName: "BlogWim", // max 12 characters
-  manifestStartUrl: "/blog/",
+  // manifestStartUrl: "/blog/",
+  //manifestStartUrl: "/blog/index.html",
   manifestBackgroundColor: colors.background,
   manifestThemeColor: colors.background,
   manifestDisplay: "standalone",

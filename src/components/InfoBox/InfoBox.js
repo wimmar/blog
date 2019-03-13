@@ -32,8 +32,8 @@ const styles = theme => ({
         right: 0,
         top: theme.base.sizes.linesMargin,
         bottom: theme.base.sizes.linesMargin,
-        //top: "20px",
-        //bottom: "20px",
+        //top: "10px",
+        //bottom: "10px",
         width: "1px",
         borderRight: `1px solid ${theme.base.colors.lines}`
       }
