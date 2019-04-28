@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog]]></title><description><![CDATA[Programming (embedded and web) blogposts]]></description><link>https://wimmar.be/blog</link><generator>RSS for Node</generator><lastBuildDate>Sun, 28 Apr 2019 14:54:21 GMT</lastBuildDate><item><title><![CDATA[Vue static doc site generation]]></title><description><![CDATA[Lately, I’ve created some webapps with Vue and I’ve liked the experience. I don’t have a well-tested overview of all frontend frameworks…]]></description><link>https://wimmar.be/blog/vuepress/</link><guid isPermaLink="false">https://wimmar.be/blog/vuepress/</guid><content:encoded>&lt;p&gt;Lately, I’ve created some webapps with Vue and I’ve liked the experience. I don’t have a well-tested overview of all frontend frameworks though. Vue is a bit more opinionated than React, which can be an advantage or a disadvantage depending how you look at it. I enjoy having a bit more of an opinioted framework, as to avoid an “embarrassment of riches”. (I don’t want to e.g. have to choose between four routing libraries)&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog]]></title><description><![CDATA[Programming (embedded and web) blogposts]]></description><link>https://wimmar.be/blog</link><generator>RSS for Node</generator><lastBuildDate>Sun, 28 Apr 2019 15:50:32 GMT</lastBuildDate><item><title><![CDATA[Vue static doc site generation]]></title><description><![CDATA[Lately, I’ve created some webapps with Vue and I’ve liked the experience. I don’t have a well-tested overview of all frontend frameworks…]]></description><link>https://wimmar.be/blog/vuepress/</link><guid isPermaLink="false">https://wimmar.be/blog/vuepress/</guid><content:encoded>&lt;p&gt;Lately, I’ve created some webapps with Vue and I’ve liked the experience. I don’t have a well-tested overview of all frontend frameworks though. Vue is a bit more opinionated than React, which can be an advantage or a disadvantage depending how you look at it. I enjoy having a bit more of an opinioted framework, as to avoid an “embarrassment of riches”. (I don’t want to e.g. have to choose between four routing libraries)&lt;/p&gt;
 &lt;h2&gt;Vuepress&lt;/h2&gt;
 &lt;p&gt;A previous blogpost discussed Gatsby, as a static site generator, used for this blog, as well as static sites in general. Recently I’ve been using a different static site framework called &lt;strong&gt;Vuepress&lt;/strong&gt; to write documentation. It can be found at &lt;a href=&quot;https://docs.rtloc.com&quot;&gt;https://docs.rtloc.com&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Vuepress is a fairly recent static doc site generator. It doen’t have all the features that some more mature frameworks offer. The main advantage of Vuepress can however be the ease of including Vue components.&lt;/p&gt;
@@ -45,7 +45,7 @@ Compared to native mobile apps there is of course also the element of performanc
 
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/blog/static/whatweb-39324fa3837e9fb4a76766b4cc3d2d76-15c57.png&quot;
+    href=&quot;/static/whatweb-39324fa3837e9fb4a76766b4cc3d2d76-15c57.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -64,13 +64,13 @@ Compared to native mobile apps there is of course also the element of performanc
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
         alt=&quot;Whatweb&quot;
         title=&quot;&quot;
-        src=&quot;/blog/static/whatweb-39324fa3837e9fb4a76766b4cc3d2d76-48538.png&quot;
-        srcset=&quot;/blog/static/whatweb-39324fa3837e9fb4a76766b4cc3d2d76-bed0f.png 200w,
-/blog/static/whatweb-39324fa3837e9fb4a76766b4cc3d2d76-5fd34.png 400w,
-/blog/static/whatweb-39324fa3837e9fb4a76766b4cc3d2d76-48538.png 800w,
-/blog/static/whatweb-39324fa3837e9fb4a76766b4cc3d2d76-b70ec.png 1200w,
-/blog/static/whatweb-39324fa3837e9fb4a76766b4cc3d2d76-d134a.png 1600w,
-/blog/static/whatweb-39324fa3837e9fb4a76766b4cc3d2d76-15c57.png 2032w&quot;
+        src=&quot;/static/whatweb-39324fa3837e9fb4a76766b4cc3d2d76-48538.png&quot;
+        srcset=&quot;/static/whatweb-39324fa3837e9fb4a76766b4cc3d2d76-bed0f.png 200w,
+/static/whatweb-39324fa3837e9fb4a76766b4cc3d2d76-5fd34.png 400w,
+/static/whatweb-39324fa3837e9fb4a76766b4cc3d2d76-48538.png 800w,
+/static/whatweb-39324fa3837e9fb4a76766b4cc3d2d76-b70ec.png 1200w,
+/static/whatweb-39324fa3837e9fb4a76766b4cc3d2d76-d134a.png 1600w,
+/static/whatweb-39324fa3837e9fb4a76766b4cc3d2d76-15c57.png 2032w&quot;
         sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
       /&gt;
     &lt;/span&gt;
@@ -117,7 +117,7 @@ Compared to native mobile apps there is of course also the element of performanc
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/blog/static/pio1-bfa5a5c218151b8fc6e582e251d109d1-b9b8f.png&quot;
+    href=&quot;/static/pio1-bfa5a5c218151b8fc6e582e251d109d1-b9b8f.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -136,13 +136,13 @@ Compared to native mobile apps there is of course also the element of performanc
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
         alt=&quot;PlatformIO in VS Code&quot;
         title=&quot;&quot;
-        src=&quot;/blog/static/pio1-bfa5a5c218151b8fc6e582e251d109d1-48538.png&quot;
-        srcset=&quot;/blog/static/pio1-bfa5a5c218151b8fc6e582e251d109d1-bed0f.png 200w,
-/blog/static/pio1-bfa5a5c218151b8fc6e582e251d109d1-5fd34.png 400w,
-/blog/static/pio1-bfa5a5c218151b8fc6e582e251d109d1-48538.png 800w,
-/blog/static/pio1-bfa5a5c218151b8fc6e582e251d109d1-b70ec.png 1200w,
-/blog/static/pio1-bfa5a5c218151b8fc6e582e251d109d1-d134a.png 1600w,
-/blog/static/pio1-bfa5a5c218151b8fc6e582e251d109d1-b9b8f.png 1918w&quot;
+        src=&quot;/static/pio1-bfa5a5c218151b8fc6e582e251d109d1-48538.png&quot;
+        srcset=&quot;/static/pio1-bfa5a5c218151b8fc6e582e251d109d1-bed0f.png 200w,
+/static/pio1-bfa5a5c218151b8fc6e582e251d109d1-5fd34.png 400w,
+/static/pio1-bfa5a5c218151b8fc6e582e251d109d1-48538.png 800w,
+/static/pio1-bfa5a5c218151b8fc6e582e251d109d1-b70ec.png 1200w,
+/static/pio1-bfa5a5c218151b8fc6e582e251d109d1-d134a.png 1600w,
+/static/pio1-bfa5a5c218151b8fc6e582e251d109d1-b9b8f.png 1918w&quot;
         sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
       /&gt;
     &lt;/span&gt;
@@ -361,7 +361,7 @@ Default&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;target_bin&
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/blog/static/gatsby-32836b58764e8a242bdd0ec4baf832d8-cb2c2.jpg&quot;
+    href=&quot;/static/gatsby-32836b58764e8a242bdd0ec4baf832d8-cb2c2.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -380,10 +380,10 @@ Default&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;target_bin&
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
         alt=&quot;Warner Bros&quot;
         title=&quot;&quot;
-        src=&quot;/blog/static/gatsby-32836b58764e8a242bdd0ec4baf832d8-cb2c2.jpg&quot;
-        srcset=&quot;/blog/static/gatsby-32836b58764e8a242bdd0ec4baf832d8-c8d2d.jpg 200w,
-/blog/static/gatsby-32836b58764e8a242bdd0ec4baf832d8-6b0dd.jpg 400w,
-/blog/static/gatsby-32836b58764e8a242bdd0ec4baf832d8-cb2c2.jpg 666w&quot;
+        src=&quot;/static/gatsby-32836b58764e8a242bdd0ec4baf832d8-cb2c2.jpg&quot;
+        srcset=&quot;/static/gatsby-32836b58764e8a242bdd0ec4baf832d8-c8d2d.jpg 200w,
+/static/gatsby-32836b58764e8a242bdd0ec4baf832d8-6b0dd.jpg 400w,
+/static/gatsby-32836b58764e8a242bdd0ec4baf832d8-cb2c2.jpg 666w&quot;
         sizes=&quot;(max-width: 666px) 100vw, 666px&quot;
       /&gt;
     &lt;/span&gt;
