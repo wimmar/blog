@@ -32,7 +32,7 @@ const queries = [
 // console.log(process.env)
 
 module.exports = {
-  pathPrefix: `/blog`,
+  pathPrefix: "blog",
   siteMetadata: {
     title: config.siteTitle,
     description: config.siteDescription,
