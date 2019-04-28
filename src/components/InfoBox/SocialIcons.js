@@ -13,7 +13,8 @@ const styles = theme => ({
   social: {
     display: "flex",
     justifyContent: "center",
-    flexWrap: "wrap"
+    flexWrap: "wrap",
+    marginTop: "10px"
   },
   link: {
     display: "inline-block",

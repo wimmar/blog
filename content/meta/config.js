@@ -13,11 +13,11 @@ module.exports = {
   authorName: "Wim Marynissen",
   authorTwitterAccount: "wim_mar",
   // info
-  infoTitle: "Programming notes",
+  infoTitle: "Dev sidetracks",
   infoTitleNote: "by Wim Marynissen",
   // infoTitleNote: "software engineering blog",
   // manifest.json
-  manifestName: "Programming notes",
+  manifestName: "Dev sidetracks",
   manifestShortName: "BlogWim", // max 12 characters
   // manifestStartUrl: "/blog/",
   //manifestStartUrl: "/blog/index.html",

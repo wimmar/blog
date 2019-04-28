@@ -48,7 +48,7 @@ You will have to set up a **manifest file** (and link to it from your index page
 
 ```json
 {
-  "name": "Programming notes",
+  "name": "Dev sidetracks",
   "short_name": "BlogWim",
   "start_url": "/blog/index.html",
   "background_color": "#111",

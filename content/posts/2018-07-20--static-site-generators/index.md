@@ -1,6 +1,6 @@
 ---
 title: Static site generators
-subTitle: ...And why I chose Gatsby
+subTitle: ...And why I chose Gatsby for this blog
 cover: gatsby.jpg
 ---
 

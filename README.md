@@ -1,4 +1,4 @@
-# Programming notes blog
+# Dev sidetracks blog
 
 A [programming-related blog](https://wimmar.be/blog), statically generated using Gatsby. Blogposts are written using markdown.
 

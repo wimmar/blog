@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",
-    "dev": "gatsby develop --host 192.168.0.220",
+    "dev": "gatsby develop --host 192.168.0.220 --port 9000",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "dist": "gatsby build --prefix-paths",

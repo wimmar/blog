@@ -28,6 +28,8 @@ const queries = [
     transformer: ({ data }) => data.allMarkdownRemark.edges.map(({ node }) => node)
   }
 ];
+// console.log('ENV')
+// console.log(process.env)
 
 module.exports = {
   pathPrefix: `/blog`,
