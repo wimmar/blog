@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog]]></title><description><![CDATA[Programming (embedded and web) blogposts]]></description><link>https://wimmar.be/blog</link><generator>RSS for Node</generator><lastBuildDate>Sun, 28 Apr 2019 14:54:21 GMT</lastBuildDate><item><title><![CDATA[Vue static doc site generation]]></title><description><![CDATA[Lately, I’ve created some webapps with Vue and I’ve liked the experience. I don’t have a well-tested overview of all frontend frameworks…]]></description><link>https://wimmar.be/blog/vuepress/</link><guid isPermaLink="false">https://wimmar.be/blog/vuepress/</guid><content:encoded>&lt;p&gt;Lately, I’ve created some webapps with Vue and I’ve liked the experience. I don’t have a well-tested overview of all frontend frameworks though. Vue is a bit more opinionated than React, which can be an advantage or a disadvantage depending how you look at it. I enjoy having a bit more of an opinioted framework, as to avoid an “embarrassment of riches”. (I don’t want to e.g. have to choose between four routing libraries)&lt;/p&gt;
+&lt;h2&gt;Vuepress&lt;/h2&gt;
+&lt;p&gt;A previous blogpost discussed Gatsby, as a static site generator, used for this blog, as well as static sites in general. Recently I’ve been using a different static site framework called &lt;strong&gt;Vuepress&lt;/strong&gt; to write documentation. It can be found at &lt;a href=&quot;https://docs.rtloc.com&quot;&gt;https://docs.rtloc.com&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Vuepress is a fairly recent static doc site generator. It doen’t have all the features that some more mature frameworks offer. The main advantage of Vuepress can however be the ease of including Vue components.&lt;/p&gt;
+&lt;p&gt;We’re looking forward to the release of Vuepress v1! (Initial version is referred to as 0.x)&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Progressive Web Apps (PWAs): an introduction]]></title><description><![CDATA[Short answer: they’re websites (/ “web apps”) with some extra functionality. The extra functionality can be offline availability, “native…]]></description><link>https://wimmar.be/blog/pwa/</link><guid isPermaLink="false">https://wimmar.be/blog/pwa/</guid><content:encoded>&lt;p&gt;Short answer: they’re websites (/ “web apps”) with some extra functionality. The extra functionality can be offline availability, “native” device features (e.g. push messages, GPS, etc.), ability to install the app. The following blogpost can serve as a short introduction to the concept of PWA’s.&lt;/p&gt;
+&lt;h2&gt;What’s a PWA?&lt;/h2&gt;
+&lt;p&gt;A PWA is a website / web app that aims to deliver an experience similar to a native (mobile or desktop) application, by making it offline available, triggering native device features etc. When visiting it using your browser, you can add it to your homescreen and it will seem to function like a regular app. (not just a bookmark!) Some characteristics are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Responsive&lt;/strong&gt;: Fit any form factor&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Installable&lt;/strong&gt; and &lt;strong&gt;Offline available&lt;/strong&gt;: Through the use of service workers&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Secure&lt;/strong&gt;: served via HTTPS&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Re-engageable&lt;/strong&gt;: e.g. through push notifications&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For an overview of some example PWA’s, take a look at &lt;a href=&quot;https://pwa.rocks/&quot;&gt;here&lt;/a&gt;. Some popular services/apps have released PWA versions, twitter lite for example.&lt;/p&gt;
+&lt;h2&gt;Comparison with mobile apps&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Let’s compare with mobile apps created using web concepts such as Cordova/PhoneGap.
+Compared to native mobile apps there is of course also the element of performance.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;PWA pro’s:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Easily linkable (through a URL)&lt;/li&gt;
+&lt;li&gt;Easily installable (without an app store)&lt;/li&gt;
+&lt;li&gt;More cross-platform&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;PWA weaknesses:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Communication between apps (mobile apps can talk to other apps)&lt;/li&gt;
+&lt;li&gt;No app store: app stores can be a very convenient utility for finding different apps. There might be app stores for PWA’s as well though, or they might get integrated in to app stores, TBD…&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Less device API support&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;e.g. GPS can be accessed, but &lt;em&gt;geofencing&lt;/em&gt; is not yet possible for PWA’s&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;On the account of native API access, there might be more support than you suspect. Check out &lt;a href=&quot;https://whatwebcando.today/&quot;&gt;whatwebcando.today&lt;/a&gt; using your mobile browser to find out what’s supported on your phone. For chrome on android for example, there’s support for push notifications, bluetooth, GPS, VR and AR, etc.
+
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blog/static/whatweb-39324fa3837e9fb4a76766b4cc3d2d76-15c57.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 49.60629921259843%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAB4klEQVQozzVR7U4TQRTd59AXECEm/lQfyvcgErEG8QeIFjSlWD9CojEhQKUsllIjrZZKNWFhZ3b2q7s7OzO7sLT1tBtvzt69c8+9c27uaH6//217q1Ipd3x3NDHf9ymlnucRQlzXxTEIAsYYMvBCiLwsiiLNCnj0+c2f1dlHx0deopA1DKPZbHa73UajgaDz39rtdr1e7/V6eXMYhprdDw43K++Kz0unJ/Lq8uo6Czm3XZc5DmDZjNrMpJQ5NqEUAca4zDIAI2uB5512Tlo/jn2T9An1TBIQyzdN/8J0TJMZZx5ik7jnFwG1UJCDM7vvOFqHmMX291etxuLB3oJeLdR2C/vVgl6d/br16VdL/92Zr+3g+HhvGx54sr/zVK8+ax7oZ3+1ze7Puxsv779fu/dh7cHH13ferkytL02vL99cXXy4+2X+SJ/eWJkpv7hdXgamSku3SmP2RnFh7rCmSSkd16WMcREHURhxHktxPRxgJUopqdQ4GUVxHOOXZulwNBoM4UZCSi1R6twwKCEIYs5lLDjnaAOdJkmiErQhLyZeKjEcDfNtQ3WsTC0LwOoDfFGIKwGIJxPzfD9/auiDF0oMJnONlXFjmqZ4egjGGFnJnIONhZWKJgYWNVBCUTbIcuV/mw4GxQ4oFFIAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;Whatweb&quot;
+        title=&quot;&quot;
+        src=&quot;/blog/static/whatweb-39324fa3837e9fb4a76766b4cc3d2d76-48538.png&quot;
+        srcset=&quot;/blog/static/whatweb-39324fa3837e9fb4a76766b4cc3d2d76-bed0f.png 200w,
+/blog/static/whatweb-39324fa3837e9fb4a76766b4cc3d2d76-5fd34.png 400w,
+/blog/static/whatweb-39324fa3837e9fb4a76766b4cc3d2d76-48538.png 800w,
+/blog/static/whatweb-39324fa3837e9fb4a76766b4cc3d2d76-b70ec.png 1200w,
+/blog/static/whatweb-39324fa3837e9fb4a76766b4cc3d2d76-d134a.png 1600w,
+/blog/static/whatweb-39324fa3837e9fb4a76766b4cc3d2d76-15c57.png 2032w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Not just mobile&lt;/h2&gt;
+&lt;p&gt;Chrome has experimental support for PWA. You can enable it at chrome://flags/#enable-desktop-pwas &lt;/p&gt;
+&lt;h2&gt;How to set up your PWA&lt;/h2&gt;
+&lt;p&gt;You will have to set up a &lt;strong&gt;manifest file&lt;/strong&gt; (and link to it from your index page). This can be &lt;code class=&quot;language-text&quot;&gt;manifest.json&lt;/code&gt; or &lt;code class=&quot;language-text&quot;&gt;manifest.webmanifest&lt;/code&gt;. The manifest file defines various PWA settings. One is an app icon, preferably provided in different sizes. Check out the manifest file for this blog:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;
+      &lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Dev sidetracks&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;short_name&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;BlogWim&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;start_url&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;/blog/index.html&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;background_color&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;#111&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;theme_color&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;#111&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;display&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;standalone&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;icons&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;&quot;src&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;/icons/icon-48x48.png&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token property&quot;&gt;&quot;sizes&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;48x48&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;image/png&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;&quot;src&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;/icons/icon-96x96.png&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;&quot;sizes&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;96x96&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;image/png&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;&quot;src&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;/icons/icon-144x144.png&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;&quot;sizes&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;144x144&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;image/png&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;&quot;src&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;/icons/icon-192x192.png&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;&quot;sizes&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;192x192&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;image/png&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;&quot;src&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;/icons/icon-256x256.png&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;&quot;sizes&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;256x256&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;image/png&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;&quot;src&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;/icons/icon-384x384.png&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;&quot;sizes&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;384x384&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;image/png&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;&quot;src&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;/icons/icon-512x512.png&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;&quot;sizes&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;512x512&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;image/png&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;A manifest file can easily be generated using a plugin for e.g. Gatsby (this blog) or Webpack etc. Or using a tool such as this &lt;a href=&quot;https://app-manifest.firebaseapp.com/&quot;&gt;Web App manifest generator&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Next, you need to register a &lt;strong&gt;service worker&lt;/strong&gt;. Depending on the framework you might already be using, there could just be a plugin readily availble. For webpack, you can use a &lt;a href=&quot;https://github.com/GoogleChromeLabs/sw-precache&quot;&gt;plugin&lt;/a&gt;. Vue CLI 3 has the following handy plugin: &lt;code class=&quot;language-text&quot;&gt;@vue/cli-plugin-pwa&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;All PWA’s have to be served over &lt;strong&gt;HTTPS&lt;/strong&gt;, so you’ll need to get that SSL certificate set up (&lt;a href=&quot;https://letsencrypt.org/&quot;&gt;Let’s Encrypt&lt;/a&gt; is a convenient option). This is because a PWA relies on service workers. These are scripts which are run not on the server or on the client (it can’t access the DOM) but in the background by your browser, separate from web pages. They open the door to features that don’t need a web page or user interaction. You can do powerful things using service workers. So to prevent abuse, through e.g. man-in-the-middle attacks, webapps can only be served over HTTPS.&lt;/p&gt;
+&lt;p&gt;If you adhere to the requirements mentioned above, you should have a functional PWA. But when opening your web page not much will seem to have changed. In order to also show an &lt;strong&gt;install banner&lt;/strong&gt; in chrome, you have to &lt;a href=&quot;https://developers.google.com/web/fundamentals/app-install-banners/#listen_for_beforeinstallprompt&quot;&gt;listen to the event “beforeinstallprompt”&lt;/a&gt; to trigger the banner (or any element on your website, really). In chrome 67, this banner was generated automatically, but this feature was removed. As for IOS, there are some IOS-specific meta tags to tweak your PWA with.&lt;/p&gt;
+&lt;p&gt;These are the constituting elements of a PWA. As for best practises, check out &lt;a href=&quot;https://developers.google.com/web/progressive-web-apps/checklist&quot;&gt;Google’s PWA checklist&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Are you excited yet about PWA’s? I know I am. If the HTML5 device feature API integration continues to grow (keep checking &lt;a href=&quot;https://whatwebcando.today/&quot;&gt;what web can do&lt;/a&gt;!), PWA’s will be a viable solution for more and more projects. These apps can provide a very convenient way to implement and serve your app across many platforms using a single codebase. I think and hope they will be included (mobile and desktop) app stores.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[PlatformIO: VS Code embedded programming]]></title><description><![CDATA[PlatformIO  is a framework, written in python, which turns your favourite (web) code editor into an embedded programming IDE. Not a VSCode…]]></description><link>https://wimmar.be/blog/pio/</link><guid isPermaLink="false">https://wimmar.be/blog/pio/</guid><content:encoded>&lt;p&gt;&lt;a href=&quot;https://platformio.org&quot;&gt;PlatformIO&lt;/a&gt; is a framework, written in python, which turns your favourite (web) code editor into an embedded programming IDE. Not a VSCode fan? PlatformIO can just as well be used with the Atom editor, and there’s even integration with other popular desktop (e.g. Eclipse) and cloud IDE’s.&lt;/p&gt;
+&lt;p&gt; It will add much-wanted features such as debugging, serial port monitoring, etc. to your editor. It has a nice library manager which will make it easy to find/install/update libraries (e.g. a MQTT library).&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blog/static/pio1-bfa5a5c218151b8fc6e582e251d109d1-b9b8f.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 800px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 53.597497393117834%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABP+AAAT/gEHlDmEAAACNklEQVQoz22SuW7bQBCG+RK2JVE8llze9yXqdJBAjg0jiasAaVLmYYKocKE0saRKtk4gj/hnuIKFFC4+zM7Ocveffyg9Pf3BYrHAarXCy/Ma+/0Oh8Meu92W4kHE/f4132Oz2WC73VK+O9eb9ebwFy+bHaTR6Bpl0UMYZahiD0xXIcsyOp3Of7FzzlutFtrtNhRFIeisyqBoDLI3ws/ZI6T7+y+4u/2Ed++nGI8nCIIAURTB9304jkPrmPZCRHEs9l9rTQyJOEmRZAVM08R6vYY0GAxQlhXiIkFZV/Bcl4oGbNsG5yaYaYFxFwa3wRgTjzSc6lycsR0PXd3CfD6HNByOMOgPkFU5ev0K3OQoyhJxnIhWdGaISxVNp7ZlqKoqOLV8QqXa5VUbv5sLJ5NrVKQwykJ8+PELwfABpq6QAge6zqASGuMiNh8bhiGU6rp+QtPADI5WR8FyuYTU+JaTB0mZYPz5O4J8DMfiwjeX2jcsD6YTwbR9uswk/wJ4nicedBwXDrVuuwG6Gqe/5BlS3e8jS3MkFU25IuNpKEVR07pPsYc0q5EWQ6R5jSQtxH5Z1siyCnl+oiiHcPwUx+MRUtWrEYYxKcyQVyWp8slkh1T4wnjNsKBzj6JNXmmixi1bqHNJaTMgTkORaSiz2QxSny5JwwB5EcM0VDClC0NTwNQuQUOQ229im0xgGeShIkMn1G4Hkn/zDdroAfbdV8jDe1ykU1zmN2euire5yKZnmlypPkKtb/EP79Ru0jpAyQ8AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;PlatformIO in VS Code&quot;
+        title=&quot;&quot;
+        src=&quot;/blog/static/pio1-bfa5a5c218151b8fc6e582e251d109d1-48538.png&quot;
+        srcset=&quot;/blog/static/pio1-bfa5a5c218151b8fc6e582e251d109d1-bed0f.png 200w,
+/blog/static/pio1-bfa5a5c218151b8fc6e582e251d109d1-5fd34.png 400w,
+/blog/static/pio1-bfa5a5c218151b8fc6e582e251d109d1-48538.png 800w,
+/blog/static/pio1-bfa5a5c218151b8fc6e582e251d109d1-b70ec.png 1200w,
+/blog/static/pio1-bfa5a5c218151b8fc6e582e251d109d1-d134a.png 1600w,
+/blog/static/pio1-bfa5a5c218151b8fc6e582e251d109d1-b9b8f.png 1918w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h2&gt;A first (blink) test&lt;/h2&gt;
+&lt;p&gt;As a first test, to ensure connectivity with the board is fine and debugging works, let’s make a LED blink. Start at the platformIO home page and click “new project”. Then select the board you want to use (in my case: &lt;em&gt;Freescale Kinetis FRDM-K64F&lt;/em&gt;) and press “Finish”.&lt;/p&gt;
+&lt;p&gt;Your new project will consist of these files:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;.pioenvs/&lt;/em&gt;: build dir (firmware file, upload file, framework libraries, etc.)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;.vscode/&lt;/em&gt;: VS Code settings: debug, paths, …&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;lib/&lt;/em&gt;: project-specific libraries&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;src/&lt;/em&gt;: project code&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;platformio.ini&lt;/em&gt;: Project config&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Optional: I am using a different debug tool. I have the Segger J-Link firmware for OpenSDAv2 installed on my kinetis board (instead of the existing mbed OpenSDAv2 firmware), for convenient use with Eclipse / Kinetis Design Studio. Therefor I need to add these lines to the settings in &lt;code class=&quot;language-text&quot;&gt;platformio.ini&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;
+      &lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;debug_tool = jlink
+upload_protocol = jlink&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;Read more about the advantages of this alternative debugging firmware (over the standard mbed bootloader) &lt;a href=&quot;https://mcuoneclipse.com/2014/04/27/segger-j-link-firmware-for-opensdav2/&quot;&gt;here&lt;/a&gt;
+If you use the default mbed bootloader, you should be fine though.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Change the main file (&lt;code class=&quot;language-text&quot;&gt;src/main.cpp&lt;/code&gt;) to blink a LED:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;c&quot;&gt;
+      &lt;pre class=&quot;language-c&quot;&gt;&lt;code class=&quot;language-c&quot;&gt;#include &amp;lt;mbed.h&amp;gt;
+
+DigitalOut myled(LED1);
+
+int main() {
+    while(1) {
+        myled = 1;
+        wait(1);
+        myled = 0;
+        wait(1);
+    }
+}&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;The project is very concise, we didn’t have to make any mappings to hardware, since we’re relying the “mbed” libraries, which is the “framework” in platformIO lingo.&lt;/p&gt;
+&lt;p&gt;A VS Code debug configuration was automatically created along with the project. Set a debug point if you want, then press the &lt;em&gt;debug&lt;/em&gt; icon on the left, and launch it.&lt;/p&gt;
+&lt;h2&gt;PlatformIO’s build system&lt;/h2&gt;
+&lt;p&gt;PlatformIO does not use Make files. Instead it uses &lt;strong&gt;SCons&lt;/strong&gt;, a cross-platform build tool based on Python. The SCons command will be built starting from your &lt;code class=&quot;language-text&quot;&gt;platformio.ini&lt;/code&gt;, which is currently only a few lines long:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;
+      &lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;[env:frdm_k64f]
+platform = freescalekinetis
+board = frdm_k64f
+framework = mbed
+debug_tool = jlink
+upload_protocol = jlink&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;The platform, board and framework determine which libraries will be used (freescale libraries, mbed libraries, &lt;code class=&quot;language-text&quot;&gt;startup_MK64F12.o&lt;/code&gt;, etc). As previously mentioned I have added JLink as an upload/debug tool. Take a look at the board definition file &lt;code class=&quot;language-text&quot;&gt;frdm_k64f.json&lt;/code&gt;, which carries build, debug and upload information:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;
+      &lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;build&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;cpu&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;cortex-m4&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;f_cpu&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;120000000L&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;mcu&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;mk64fn1m0vll12&quot;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;connectivity&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&quot;ethernet&quot;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;debug&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;jlink_device&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;MK64FN1M0xxx12&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;pyocd_target&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;k64f&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;svd_path&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;MK64F12.svd&quot;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;frameworks&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&quot;mbed&quot;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Freescale Kinetis FRDM-K64F&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;upload&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;maximum_ram_size&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;262144&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;maximum_size&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1048576&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;protocol&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;mbed&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;protocols&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+      &lt;span class=&quot;token string&quot;&gt;&quot;cmsis-dap&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token string&quot;&gt;&quot;jlink&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token string&quot;&gt;&quot;mbed&quot;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;url&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;https://developer.mbed.org/platforms/FRDM-K64F/&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;vendor&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Freescale&quot;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;When building, the PlatformIO executable is called, which in turn will call SCons, using the provided parameters and referencing the main build script file: &lt;code class=&quot;language-text&quot;&gt;main.py&lt;/code&gt;. Take a look at it’s base template:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;
+      &lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token triple-quoted-string string&quot;&gt;&quot;&quot;&quot;
+    Build script for test.py
+    test-builder.py
+&quot;&quot;&quot;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; os&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;path &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; join
+&lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; SCons&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Script &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; AlwaysBuild&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; Builder&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; Default&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; DefaultEnvironment
+
+env &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; DefaultEnvironment&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# A full list with the available variables&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# http://www.scons.org/doc/production/HTML/scons-user.html#app-variables&lt;/span&gt;
+env&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Replace&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+    AR&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;ar&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    AS&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;gcc&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    CC&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;gcc&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    CXX&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;g++&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    OBJCOPY&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;objcopy&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    RANLIB&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;ranlib&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+
+    ARFLAGS&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;...&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+
+    ASFLAGS&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;flag1&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;flag2&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;flagN&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    CCFLAGS&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;flag1&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;flag2&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;flagN&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    CXXFLAGS&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;flag1&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;flag2&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;flagN&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    LINKFLAGS&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;flag1&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;flag2&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;flagN&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+
+    CPPDEFINES&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;DEFINE_1&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;DEFINE=2&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;DEFINE_N&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+
+    LIBS&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;additional&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;libs&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;here&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+
+    UPLOADER&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;join&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;$PIOPACKAGES_DIR&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;tool-bar&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;uploader&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    UPLOADCMD&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;$UPLOADER $SOURCES&quot;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+env&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Append&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+    BUILDERS&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;dict&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+        ElfToBin&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;Builder&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+            action&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot; &quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;join&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+                &lt;span class=&quot;token string&quot;&gt;&quot;$OBJCOPY&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;token string&quot;&gt;&quot;-O&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;token string&quot;&gt;&quot;binary&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;token string&quot;&gt;&quot;$SOURCES&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;token string&quot;&gt;&quot;$TARGET&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            suffix&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;.bin&quot;&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# The source code of &quot;platformio-build-tool&quot; is here&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# https://github.com/platformio/platformio-core/blob/develop/platformio/builder/tools/platformio.py&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# Target: Build executable and linkable firmware&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;#&lt;/span&gt;
+target_elf &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; env&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;BuildProgram&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# Target: Build the .bin file&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;#&lt;/span&gt;
+target_bin &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; env&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;ElfToBin&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;join&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;$BUILD_DIR&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;firmware&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; target_elf&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# Target: Upload firmware&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;#&lt;/span&gt;
+upload &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; env&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Alias&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;upload&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; target_bin&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;$UPLOADCMD&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+AlwaysBuild&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;upload&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# Target: Define targets&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;#&lt;/span&gt;
+Default&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;target_bin&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;The terminal output when building shows us the libraries in the mbed “framework”. The Freescale drives &lt;code class=&quot;language-text&quot;&gt;fsl_*&lt;/code&gt; should look familiar if you’ve programmed Kinetis boards before.&lt;/p&gt;
+&lt;h2&gt;Can I convert my existing embedded project to use platformIO?&lt;/h2&gt;
+&lt;p&gt;Killer question. It should be possible, but depending on your current codebase/project this might be easy or quite hard. You could make your own development platform definition (a &lt;code class=&quot;language-text&quot;&gt;manifest.json&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;main.py&lt;/code&gt;) and board definition (&lt;code class=&quot;language-text&quot;&gt;myboard.json&lt;/code&gt;). For examples, take a look at the &lt;a href=&quot;&quot;&gt;github repository&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;Yes, but should you?&lt;/h3&gt;
+&lt;p&gt;You’d like to use a modern editor for your embedded project. PlatformIO is not the only way to achieve this. If your plan on keeping your directory structure, your own libraries and makefiles, you might not need/want platformIO. It might just be easier to open your existing code, and create a working launch (debug) config.&lt;/p&gt;
+&lt;p&gt;Essentially you just want to stitch the VS Code launch config to GDB. The &lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=marus25.cortex-debug&quot;&gt;Cortex-Debug&lt;/a&gt; extension can help you create the right launch configuration. The following launch configuration works fine with my Kinetis board:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;
+      &lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;version&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;0.2.0&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;configurations&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;token property&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;cortex-debug&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token property&quot;&gt;&quot;request&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;launch&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token property&quot;&gt;&quot;servertype&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;jlink&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token property&quot;&gt;&quot;cwd&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;${workspaceRoot}&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token property&quot;&gt;&quot;executable&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&amp;lt;full-path&gt;/firmware.elf&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token property&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Debug J-Link&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token property&quot;&gt;&quot;device&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;MK64FN1M0xxx12&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token property&quot;&gt;&quot;interface&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;swd&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I did have to set the &lt;code class=&quot;language-text&quot;&gt;cortex-debug.JLinkGDBServerPath&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;cortex-debug.armToolchainPath&lt;/code&gt; in workspace settings, but if the GDB and arm-eabi executables are in your system path you should be fine.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Debugging is not the only thing you want though (but it’s a biggie). Other things you might want:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;A serial monitor: check out &lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=olback.vscode-serial&quot;&gt;this extension&lt;/a&gt;?&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You could use PlatformIO’s monitor, but platformIO does take some time to load at startup. So if all you’re going to use is the serial monitor, why go bulky?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Building and flashing support, instellisense, …&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Update: check out my other post about Embedded VS Code development (without PlatformIO)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;PlatformIO is perfect if you’re a hobbyist and you’re just starting a new project. It will get you started fast, providing you with clean library and code management. If you have an existing project, it might not be trivial to convert to platformIO (using the platformIO board and framework definitions). You might then be better off configuring some extension(s) for debugging, serial console, etc. to fit your codebase.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Static site generators]]></title><description><![CDATA[These days there’s a plethora of static site generators. This blogpost describes what they are and when they can be used. By the way, this…]]></description><link>https://wimmar.be/blog/static-site-generators/</link><guid isPermaLink="false">https://wimmar.be/blog/static-site-generators/</guid><content:encoded>&lt;p&gt;These days there’s a plethora of static site generators. This blogpost describes what they are and when they can be used. By the way, this blog is deployed using the &lt;a href=&quot;https://gatsby.com&quot;&gt;Gatsby&lt;/a&gt; static site generator, using Markdown for the content.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blog/static/gatsby-32836b58764e8a242bdd0ec4baf832d8-cb2c2.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 666px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 75.07507507507508%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIEBf/EABUBAQEAAAAAAAAAAAAAAAAAAAEA/9oADAMBAAIQAxAAAAHOaZS1SYT/xAAbEAACAgMBAAAAAAAAAAAAAAABAgARAxITIf/aAAgBAQABBQLAnuetxRnQgFriMNf/xAAVEQEBAAAAAAAAAAAAAAAAAAAAEv/aAAgBAwEBPwFL/8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAIAQIBAT8BV//EABwQAAMAAgMBAAAAAAAAAAAAAAABEQJBEjFRcf/aAAgBAQAGPwLnpMeS7ULbfR46Ffgqj//EABoQAAIDAQEAAAAAAAAAAAAAAAERACFBMXH/2gAIAQEAAT8hOQE7JauBHYjUVijiFTmMo4BTYCJp9n//2gAMAwEAAgADAAAAELQP/8QAFxEAAwEAAAAAAAAAAAAAAAAAABEhcf/aAAgBAwEBPxBxGj//xAAXEQADAQAAAAAAAAAAAAAAAAAAESFx/9oACAECAQE/EFWZP//EABwQAQACAgMBAAAAAAAAAAAAAAERMQAhQVGBYf/aAAgBAQABPxCFhCldTfXeCC+xNlfawBgiR1Le45v1wAEgw3NZowUkNKX7jsANrj//2Q==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;Warner Bros&quot;
+        title=&quot;&quot;
+        src=&quot;/blog/static/gatsby-32836b58764e8a242bdd0ec4baf832d8-cb2c2.jpg&quot;
+        srcset=&quot;/blog/static/gatsby-32836b58764e8a242bdd0ec4baf832d8-c8d2d.jpg 200w,
+/blog/static/gatsby-32836b58764e8a242bdd0ec4baf832d8-6b0dd.jpg 400w,
+/blog/static/gatsby-32836b58764e8a242bdd0ec4baf832d8-cb2c2.jpg 666w&quot;
+        sizes=&quot;(max-width: 666px) 100vw, 666px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h3&gt;But… it’s only static?&lt;/h3&gt;
+&lt;p&gt;The word static naturally brings along a negative connotation. But should it really? A static site delivers it’s content to the user exactly as it’s stored. As opposed to a dynamic website which either at the server side or the client side pull in information, allow more interaction etc. To avoid confusion, &lt;em&gt;static&lt;/em&gt; does not mean &lt;em&gt;plain&lt;/em&gt;. These websites can have fancy moving elements and a responsive design.&lt;/p&gt;
+&lt;h3&gt;Comparison to CMS (Wordpress)&lt;/h3&gt;
+&lt;p&gt;When you visit a WordPress (or Drupal or a different CMS), WordPress gets content from the database (SQL or noSQL), builds the page using a template,  and sends the complete HTML page back to your browser. The content to be displayed is “built” at that very moment.&lt;/p&gt;
+&lt;p&gt;In contrast, a static site generator builds the pages in advance. When the developer launches the &lt;em&gt;build&lt;/em&gt; command, it fetches data from different sources, applies the configured templates and returns the static files. They can then be hosted on a webserver (e.g. Apache, Nginx). And they allow you to easily set up your site/blog/documentation on a &lt;strong&gt;simple server&lt;/strong&gt;, without even the need for a database. They also allow a lot of &lt;strong&gt;flexibility&lt;/strong&gt; in terms of static content resources.&lt;/p&gt;
+&lt;h3&gt;Static content&lt;/h3&gt;
+&lt;p&gt;Where and how do you define your static content? Anywhere.. It could be a local file on your computer, it can be a published article e.g. on medium (you don’t want to publish that content again, you want them linked), data in your Wordpress CMS, etc. The power of a static site generator truly becomes clear when combining many different resources.&lt;/p&gt;
+&lt;h3&gt;Static site generators&lt;/h3&gt;
+&lt;p&gt;There’s a plethora of static site generators, check out &lt;a href=&quot;https://www.staticgen.com/&quot;&gt;https://www.staticgen.com/&lt;/a&gt; and get overwhelmed! Let’s consider generators which will make a website/blog. (There are e.g. also documentation-page generators, like the ones github will host for you) Some of the best known frameworks are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Jekyll&lt;/strong&gt; (Ruby)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Gatsby&lt;/strong&gt; (React)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Hugo&lt;/strong&gt; (Go)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Hexo&lt;/strong&gt; (Node)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These are all very viable solution. I didn’t try all of them so I will not go into comparison. There’s a few (small) reasons why I chose Gatsby. It caught my attention when I read and heard (in podcasts) about it a few times. I’d been wanting to get a bit more into react, so that ticked a box as well. When I checked out the Gatsby docs, and saw the rich integration possibilities, I was sold on trying it out. I’m only using Markdown for these blogposts though.&lt;/p&gt;
+&lt;h3&gt;Gatsby, not your average SSG&lt;/h3&gt;
+&lt;p&gt;These are some of the frameworks Gatsby integrates:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;React&lt;/strong&gt;: bring &lt;strong&gt;SPA&lt;/strong&gt; (“single-page app”) features&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GraphQL&lt;/strong&gt;: for querying data from different resources&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Webpack&lt;/strong&gt;: JS bundling
+The SPA which is generated might not fit the definition of a “static” site. But the content is static since it’s gathered and packed at build time.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;How do I get started?&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;If you haven’t yet, &lt;a href=&quot;https://nodejs.org/en/download/package-manager/&quot;&gt;install node&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Tip: use a package manager&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;Install the Gatsby CLI: &lt;code class=&quot;language-text&quot;&gt;npm install -g gatsby&lt;/code&gt; or add it as a dependency to your project&lt;/li&gt;
+&lt;li&gt;Look for a starter template that suits your purpose, &lt;a href=&quot;https://www.gatsbyjs.org/docs/gatsby-starters/&quot;&gt;here are some&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Clone the boilerplate, for example: &lt;code class=&quot;language-text&quot;&gt;gatsby new blog https://github.com/gatsbyjs/gatsby-starter-blog&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;Conclusion&lt;/h3&gt;
+&lt;p&gt;You can have your blog up in no time with any of these website-generating frameworks. They allow alot of flexibility in terms of how/where you define your static content, and (by being static) require only a simple file-hosting server. These static sites don’t have to be “plain”/boring. They are designer friendly, you can go and tweak your layout. If you’re craving for some React development, I’d recommend trying Gatsby. If you prefer some “plain” JavaScript you can e.g. opt for Jekyll.&lt;/p&gt;</content:encoded></item></channel></rss>
