@@ -11,3 +11,4 @@ I'm a Belgian electrical engineer with a passion for technology and programming 
 
 [View my resume](https://wimmar.be)
 
+[Support me trough affiliates](https://invites.wimmar.be)

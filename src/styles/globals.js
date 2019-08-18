@@ -371,6 +371,10 @@ export default {
     },
     "input:-webkit-autofill": {
       "-webkit-box-shadow": "0 0 0 50px white inset"
+    },
+    "::selection": {
+      color: "#fff",
+      background: "#337ab7"
     }
   }
 };

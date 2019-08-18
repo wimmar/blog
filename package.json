@@ -17,7 +17,7 @@
     "lint": "eslint src/**/*.{js,jsx}",
     "icons": "cd scripts/ && generate-app-icons.bat",
     "testbuild": "browser-sync start --server \"public\" --online \"false\" --serveStatic \"./\" --files \"public\"",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+    "deploy": "gatsby build && gh-pages -d public"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.6",
@@ -33,7 +33,7 @@
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-prettier": "^2.6.2",
     "eslint-plugin-react": "^7.10.0",
-    "gh-pages":"^2.0.1",
+    "gh-pages": "^2.0.1",
     "prettier": "^1.13.7",
     "sharp-cli": "^1.7.0",
     "webpack-bundle-analyzer": "^2.13.1"

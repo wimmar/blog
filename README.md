@@ -1,6 +1,6 @@
 # Dev sidetracks blog
 
-A [programming-related blog](https://wimmar.be/blog), statically generated using Gatsby. Blogposts are written using markdown.
+A [tech blog](https://wimmar.be/blog), statically generated using Gatsby. Blogposts are written using markdown.
 
 This blog is published as open-source, feel free to use it as you like. A MIT license file is included (referring Gatsby and the original template author)
 
